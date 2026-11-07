@@ -8,6 +8,24 @@
 
     <a href="/users">View Users</a>
 
+    <a href="{{ route('customers.create') }}" class="primary-button">
+    + Add Customer
+    <th>Action</th>
+
+    <td>
+    <a href="{{ route('customers.edit', $customer) }}"
+       class="edit-button">
+        Edit
+    </a>
+
+    @if (session('success'))
+    <div class="alert success">
+        {{ session('success') }}
+    </div>
+@endif
+</td>
+</a>
+
     <table border="1" cellpadding="10">
         <tr>
             <th>ID</th>
